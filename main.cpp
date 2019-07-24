@@ -10,48 +10,48 @@
 using namespace std;
 
 
-//±äÁ¿ÉùÃ÷ 
-char order='n';//ĞĞ¶¯Ö¸Áî 
+//å˜é‡å£°æ˜ 
+char order='n';//è¡ŒåŠ¨æŒ‡ä»¤ 
 int start;
 char line[]="====================================";
-int life=0;//ÉúÃü 
-int money=10;//Ç® 
-int food=0;//Ê³Îï 
-string weapon="ÎŞ";//ÎäÆ÷ 
-int attack=1;//¹¥»÷Á¦ 
-int place=1;//Î»ÖÃ 
-int energy=10;//ÌåÁ¦ 
-int stone=0;//Ê¯Í· 
-int store=0;//ÉÌµêĞòºÅ 
-int buy;//¹ºÂòÑ¡Ïî 
-int deadbuy;//ËÀÍö¾È¼ÃÖ¸Áî 
-int battle;//Õ½¶·Ö¸Áî
-int fix; //´«ËÍËşĞŞ¸´Ö¸Áî 
-int tp;//´«ËÍÖ¸Áî 
-int smokemoney,smokepeople;//¶Ä²©ÈËÎïÓë½ğÇ® 
-int build;//ĞŞ½¨Ö¸Áî 
-int house=0;//·¿Îİ 
-int pay=0;//ÊÕÈë 
-int wanter=0;//ÆòØ¤Ä£¿é 
-int give=0;//Ê©ÉáÖ¸Áî
-int speed=1;//ËÙ¶È 
-int invitation=0;//È¾ÑªµÄÑûÇëº¯
+int life=0;//ç”Ÿå‘½ 
+int money=10;//é’± 
+int food=0;//é£Ÿç‰© 
+string weapon="æ— ";//æ­¦å™¨ 
+int attack=1;//æ”»å‡»åŠ› 
+int place=1;//ä½ç½® 
+int energy=10;//ä½“åŠ› 
+int stone=0;//çŸ³å¤´ 
+int store=0;//å•†åº—åºå· 
+int buy;//è´­ä¹°é€‰é¡¹ 
+int deadbuy;//æ­»äº¡æ•‘æµæŒ‡ä»¤ 
+int battle;//æˆ˜æ–—æŒ‡ä»¤
+int fix; //ä¼ é€å¡”ä¿®å¤æŒ‡ä»¤ 
+int tp;//ä¼ é€æŒ‡ä»¤ 
+int smokemoney,smokepeople;//èµŒåšäººç‰©ä¸é‡‘é’± 
+int build;//ä¿®å»ºæŒ‡ä»¤ 
+int house=0;//æˆ¿å±‹ 
+int pay=0;//æ”¶å…¥ 
+int wanter=0;//ä¹ä¸æ¨¡å— 
+int give=0;//æ–½èˆæŒ‡ä»¤
+int speed=1;//é€Ÿåº¦ 
+int invitation=0;//æŸ“è¡€çš„é‚€è¯·å‡½
 
 
-int tower1=0;//´«ËÍËşÒ» 
+int tower1=0;//ä¼ é€å¡”ä¸€ 
 
-//Ò»ºÅ¹ÖÎï¡ª¡ªÆÆÍ­ÀÃÌú»úÆ÷ÈË 
+//ä¸€å·æ€ªç‰©â€”â€”ç ´é“œçƒ‚é“æœºå™¨äºº 
 int m1=1;
 int am1=1;
-//¶şºÅ¹ÖÎï¡ª¡ª·øÉäÄ§Ïñ 
+//äºŒå·æ€ªç‰©â€”â€”è¾å°„é­”åƒ 
 int m2=1;
 int am2=5;
-//ÈıºÅ¹ÖÎï¡ª¡ª»ğ¼ıÀÇ 
+//ä¸‰å·æ€ªç‰©â€”â€”ç«ç®­ç‹¼ 
 int m3=1;
 int am3=8;
-//ËÄºÅ¹ÖÎï¡ª¡ªËÄÍ·¾ŞÁú 
+//å››å·æ€ªç‰©â€”â€”å››å¤´å·¨é¾™ 
 int m4=1;
-int nm4;//Ëæ»úÊı 
+int nm4;//éšæœºæ•° 
 
 int round=1;
 
@@ -71,13 +71,13 @@ int main(){
 	
 	
 	unsigned seed;  // Random generator seed
-    // Use the time function to get a "seed¡± value for srand
+    // Use the time function to get a "seedâ€ value for srand
     seed = time(0);
     srand(seed);
     
     
 	
-	//»¶Ó­Óï
+	//æ¬¢è¿è¯­
 	Sleep(3000);
 	
 	
@@ -99,7 +99,7 @@ int main(){
 		system("cls");
 	}
 	
-	cout<<"¼ÓÔØÍê³É"<<endl;
+	cout<<"åŠ è½½å®Œæˆ"<<endl;
 	system("pause");
 	Sleep(500);
 	system("cls");
@@ -147,10 +147,10 @@ int main(){
 		Sleep(2000);
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
 		cout<<endl;
-		cout<<"1.¿ªÊ¼ĞÂÓÎÏ·"<<endl;
-		cout<<"2.²Ù×÷½Ì³Ì"<<endl;
-		cout<<"3.¶ÁÈ¡´æµµ"<<endl;
-		cout<<"4.ÍË³öÓÎÏ·"<<endl;
+		cout<<"1.å¼€å§‹æ–°æ¸¸æˆ"<<endl;
+		cout<<"2.æ“ä½œæ•™ç¨‹"<<endl;
+		cout<<"3.è¯»å–å­˜æ¡£"<<endl;
+		cout<<"4.é€€å‡ºæ¸¸æˆ"<<endl;
 		cout<<endl;
 		cout<<endl;
 		cout<<endl;
@@ -158,48 +158,48 @@ int main(){
 		cout<<endl;
 		cout<<endl;
 		cout<<endl;
-		cout<<"0.ÖÆ×÷ÃùĞ»"<<endl;
+		cout<<"0.åˆ¶ä½œé¸£è°¢"<<endl;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 		cout<<line<<endl;
 		cout<<line<<endl;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY |FOREGROUND_GREEN);
-		cout<<"ÊäÈë²¢»Ø³µ£º";
+		cout<<"è¾“å…¥å¹¶å›è½¦ï¼š";
 		cin>>start; 
 		system("cls");
 		if((start==1)|(start==3)){
 			life=3;
 			
 			system("cls");
-			cout<<"¼ÓÔØÊÀ½çÖĞ..."<<endl;
+			cout<<"åŠ è½½ä¸–ç•Œä¸­..."<<endl;
 			Sleep(3000);
 			system("cls");
 			Sleep(500);
-			cout<<"½¨ÒéÇĞ»»ÖÁÓ¢ÎÄÊäÈë·¨½øĞĞÓÎÏ·¡£"<<endl;
+			cout<<"å»ºè®®åˆ‡æ¢è‡³è‹±æ–‡è¾“å…¥æ³•è¿›è¡Œæ¸¸æˆã€‚"<<endl;
 			Sleep(2000);
 			system("cls");
 			Sleep(500);
 			if(start==3){
-				cout<<"¶ÁÈ¡´æµµÖĞ..."<<endl;
+				cout<<"è¯»å–å­˜æ¡£ä¸­..."<<endl;
 				ifstream fin("data.txt");
 				fin>>life>>money>>food>>weapon>>attack>>place>>energy>>stone>>house>>pay>>wanter>>speed>>invitation>>m1>>m2>>m3>>m4;
 			}
 		}
 		else if(start==2){
 			cout<<line<<endl;
-			cout<<"ÓÎÏ·ËµÃ÷£º"<<endl;
-			cout<<"ÄãµÄÄ¿±êÊÇ´ÓÎ»ÖÃ1¿ªÊ¼£¬"<<endl<<"ÔÚÏòÓÒÌ½Ë÷µÄÍ¾ÖĞ»÷É±Â·ÉÏµÄ¹ÖÎï£¬"<<endl<<"ÌáÉı×Ô¼ºµÄ×°±¸£¬ÔÚµØÍ¼ÉÏ½¨Ôì¸÷ÖÖ½¨ÖşÎï¡£"<<endl<<"×îÖÕ»÷É±Î»ÓÚµØÍ¼¾¡Í·µÄÎÛÈ¾Ö®Ô´..."<<endl;
+			cout<<"æ¸¸æˆè¯´æ˜ï¼š"<<endl;
+			cout<<"ä½ çš„ç›®æ ‡æ˜¯ä»ä½ç½®1å¼€å§‹ï¼Œ"<<endl<<"åœ¨å‘å³æ¢ç´¢çš„é€”ä¸­å‡»æ€è·¯ä¸Šçš„æ€ªç‰©ï¼Œ"<<endl<<"æå‡è‡ªå·±çš„è£…å¤‡ï¼Œåœ¨åœ°å›¾ä¸Šå»ºé€ å„ç§å»ºç­‘ç‰©ã€‚"<<endl<<"æœ€ç»ˆå‡»æ€ä½äºåœ°å›¾å°½å¤´çš„æ±¡æŸ“ä¹‹æº..."<<endl;
 			cout<<endl;
 			cout<<endl; 
 			
-			cout<<"²Ù×÷ËµÃ÷£º"<<endl;
+			cout<<"æ“ä½œè¯´æ˜ï¼š"<<endl;
 			cout<<endl;
-			cout<<"r:ÓÒĞĞ"<<endl;
-			cout<<"l:×óĞĞ"<<endl;
-			cout<<"e:½øÈë"<<endl;
-			cout<<"h:ÓÃÊ³"<<endl;
-			cout<<"t:´«ËÍ"<<endl;
-			cout<<"×¢Òâ£ºÒÔÉÏÖ¸ÁîÖ»ÄÜÔÚ'ÄãµÄĞĞ¶¯:'³öÏÖºóÊäÈë²ÅÓĞĞ§£¡£¡"<<endl;
-			cout<<"ÆäËûÖ¸ÁîÓÎÏ·ÖĞ¾ùÓĞÌáÊ¾¡£"<<endl;
+			cout<<"r:å³è¡Œ"<<endl;
+			cout<<"l:å·¦è¡Œ"<<endl;
+			cout<<"e:è¿›å…¥"<<endl;
+			cout<<"h:ç”¨é£Ÿ"<<endl;
+			cout<<"t:ä¼ é€"<<endl;
+			cout<<"æ³¨æ„ï¼šä»¥ä¸ŠæŒ‡ä»¤åªèƒ½åœ¨'ä½ çš„è¡ŒåŠ¨:'å‡ºç°åè¾“å…¥æ‰æœ‰æ•ˆï¼ï¼"<<endl;
+			cout<<"å…¶ä»–æŒ‡ä»¤æ¸¸æˆä¸­å‡æœ‰æç¤ºã€‚"<<endl;
 			cout<<line<<endl;
 			system("pause");
 		}
@@ -227,7 +227,7 @@ int main(){
 	
 	
 	
-	//¿ªÊ¼ÓÎÏ· 
+	//å¼€å§‹æ¸¸æˆ 
 	
 	
 	
@@ -235,53 +235,53 @@ int main(){
 	
 	
 	
-	//»ØºÏÑ­»· 
+	//å›åˆå¾ªç¯ 
 	while(life>0){
 		
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
-		//×´Ì¬ÏÔÊ¾À¸ 
+		//çŠ¶æ€æ˜¾ç¤ºæ  
 		cout<<line<<endl;
 		cout<<line<<endl;
 		cout<<"==============SAVIOR================"<<endl;
 		cout<<line<<endl;
 		cout<<line<<endl;
-		cout<<"=============="<<"»ØºÏ"<<round<<"================="<<endl;
+		cout<<"=============="<<"å›åˆ"<<round<<"================="<<endl;
 		cout<<line<<endl;
 		cout<<line<<endl;
 		cout<<line<<endl;
-		cout<<"======="<<"ÄãµÄÇ®£º"<<money<<endl;
-		cout<<"======="<<"ÄãµÄÊ³Îï£º"<<food<<endl;
-		cout<<"======="<<"ÄãµÄÊ¯Í·£º"<<stone<<endl;
-		cout<<"======="<<"ÄãµÄ·¿×Ó£º"<<house<<endl;
-		cout<<"======="<<"ÄãµÄÊÕÈë£º"<<pay<<endl;
+		cout<<"======="<<"ä½ çš„é’±ï¼š"<<money<<endl;
+		cout<<"======="<<"ä½ çš„é£Ÿç‰©ï¼š"<<food<<endl;
+		cout<<"======="<<"ä½ çš„çŸ³å¤´ï¼š"<<stone<<endl;
+		cout<<"======="<<"ä½ çš„æˆ¿å­ï¼š"<<house<<endl;
+		cout<<"======="<<"ä½ çš„æ”¶å…¥ï¼š"<<pay<<endl;
 		cout<<line<<endl;
-		cout<<"=====ÄãµÄÎ»ÖÃ£º"<<place<<"  | ÄãµÄÉúÃü£º"<<life<<"====="<<endl;
+		cout<<"=====ä½ çš„ä½ç½®ï¼š"<<place<<"  | ä½ çš„ç”Ÿå‘½ï¼š"<<life<<"====="<<endl;
 		cout<<line<<endl;
-		cout<<"=====ÄãµÄÌåÁ¦£º"<<energy<<" | ÄãµÄÕ½¶·Á¦£º"<<attack<<"===="<<endl;
+		cout<<"=====ä½ çš„ä½“åŠ›ï¼š"<<energy<<" | ä½ çš„æˆ˜æ–—åŠ›ï¼š"<<attack<<"===="<<endl;
 		cout<<line<<endl;
-		cout<<"===========ÄãµÄÎäÆ÷£º"<<weapon<<"============"<<endl; 
+		cout<<"===========ä½ çš„æ­¦å™¨ï¼š"<<weapon<<"============"<<endl; 
 		
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED |
 		FOREGROUND_GREEN | FOREGROUND_BLUE);
 		
-		//µØÍ¼ÊÂ¼ş¡ı 
+		//åœ°å›¾äº‹ä»¶â†“ 
 	
-		while(energy==0){//ÌåÁ¦ºÄ¾¡¾ñÔñÑ­»· 
-			cout<<"ÄãÒÑ¾­Ã»ÓĞÌåÁ¦ÁË£¬ÊÇ·ñ»¨10Ôª¹ºÂò2·İÊ³Îï£¿ÊäÈë1¹ºÂò£¬0½ÓÊÜËÀÍö¡£"<<endl;
+		while(energy==0){//ä½“åŠ›è€—å°½æŠ‰æ‹©å¾ªç¯ 
+			cout<<"ä½ å·²ç»æ²¡æœ‰ä½“åŠ›äº†ï¼Œæ˜¯å¦èŠ±10å…ƒè´­ä¹°2ä»½é£Ÿç‰©ï¼Ÿè¾“å…¥1è´­ä¹°ï¼Œ0æ¥å—æ­»äº¡ã€‚"<<endl;
 			cin>>deadbuy;
 			Sleep(1000);
 			if(deadbuy==1){
 				if(money>=10){
 				
-					cout<<"Äã»ñµÃÁËÁ½·İÊ³Îï¡£"<<endl;
+					cout<<"ä½ è·å¾—äº†ä¸¤ä»½é£Ÿç‰©ã€‚"<<endl;
 					energy+=8;
 					money=money-10;
 				}
 				else{
-					cout<<"ÄãÃ»ÓĞ×ã¹»µÄÇ®£¡"<<endl;
+					cout<<"ä½ æ²¡æœ‰è¶³å¤Ÿçš„é’±ï¼"<<endl;
 					Sleep(2000);
 					system("cls");
-					cout<<"ÓÎÏ·½áÊø£¬¸ĞĞ»ÓÎÍæ"<<endl;
+					cout<<"æ¸¸æˆç»“æŸï¼Œæ„Ÿè°¢æ¸¸ç©"<<endl;
 					energy--;
 					 
 				}
@@ -289,28 +289,28 @@ int main(){
 			else if(deadbuy==0){
 				system("cls");
 				Sleep(2000);
-				cout<<"ÓÎÏ·½áÊø£¬¸ĞĞ»ÓÎÍæ"<<endl;
+				cout<<"æ¸¸æˆç»“æŸï¼Œæ„Ÿè°¢æ¸¸ç©"<<endl;
 				energy--; 
 			}
 			else{
-				cout<<"ÊäÈëÓĞÎó"<<endl;
+				cout<<"è¾“å…¥æœ‰è¯¯"<<endl;
 			}
 		}
 		
 		
 		
-		if((place==13&&wanter==0)&&money>=10){//ÆòØ¤Ä£¿é 
-			cout<<"ÄãÓöµ½ÁËÒ»¸öÆòØ¤£¬ÊäÈë1À´Ê©Éá20ÔªÇ®"<<endl;
+		if((place==13&&wanter==0)&&money>=10){//ä¹ä¸æ¨¡å— 
+			cout<<"ä½ é‡åˆ°äº†ä¸€ä¸ªä¹ä¸ï¼Œè¾“å…¥1æ¥æ–½èˆ20å…ƒé’±"<<endl;
 			cin>>give;
 			Sleep(1000);
 			if(give==1 and money>=20){
-				cout<<"ÆòØ¤¸Ğ¼¤Íò·Ö"<<endl;
+				cout<<"ä¹ä¸æ„Ÿæ¿€ä¸‡åˆ†"<<endl;
 				wanter=2;
 				money=money-20;
 				
 			}
 			else if(give==1 and money<20){
-				cout<<"ÆòØ¤ÊÕÏÂÁËÄãËùÓĞµÄÇ®£¬ÂúÒâµØÀë¿ªÁË¡£"<<endl;
+				cout<<"ä¹ä¸æ”¶ä¸‹äº†ä½ æ‰€æœ‰çš„é’±ï¼Œæ»¡æ„åœ°ç¦»å¼€äº†ã€‚"<<endl;
 				money=0;
 				wanter=3;
 			}
@@ -319,7 +319,7 @@ int main(){
 		
 		
 		if(place==26 and invitation<=1){
-			cout<<"ÊäÈëeÒÔ½øÈëµØÏÂ²«»÷¾ãÀÖ²¿"<<endl; 
+			cout<<"è¾“å…¥eä»¥è¿›å…¥åœ°ä¸‹æå‡»ä¿±ä¹éƒ¨"<<endl; 
 		}
 		
 		
@@ -328,13 +328,13 @@ int main(){
 		
 		if(place==6 and house==0){
 		
-			cout<<"ËÆºõ¿ÉÒÔÓÃÈı¸öÊ¯Í·ÔÚÕâÀï½¨ÔìÒ»×ù·¿×Ó"<<endl;
-			cout<<"ÊäÈë1À´½¨Ôì,0È¡Ïû"<<endl;
+			cout<<"ä¼¼ä¹å¯ä»¥ç”¨ä¸‰ä¸ªçŸ³å¤´åœ¨è¿™é‡Œå»ºé€ ä¸€åº§æˆ¿å­"<<endl;
+			cout<<"è¾“å…¥1æ¥å»ºé€ ,0å–æ¶ˆ"<<endl;
 			cin>>build;
 			Sleep(1000);
 			if(build==1){
 				if(stone>=3){
-					cout<<"Äã³É¹¦ĞŞ½¨ÁËÒ»Ëù·¿×Ó£¬ÒÔºóÃ¿»ØºÏ¿ÉÒÔ»ñµÃ1ÔªÇ®¡£"<<endl;
+					cout<<"ä½ æˆåŠŸä¿®å»ºäº†ä¸€æ‰€æˆ¿å­ï¼Œä»¥åæ¯å›åˆå¯ä»¥è·å¾—1å…ƒé’±ã€‚"<<endl;
 					stone=stone-3;
 					house++;
 				} 
@@ -348,9 +348,9 @@ int main(){
 		
 		
 		
-		if(place==18 and wanter==3){//½±Àø×øÆï£ºËéÌìÊŞ 
-			cout<<"ÄãµÃµ½ÁË×øÆï£º¸ÖÌúËéÌìÊŞ¡£"<<endl;
-			cout<<"ÄãµÄ×óĞĞËÙ¶È¼Ó¿ìÁË"<<endl;
+		if(place==18 and wanter==3){//å¥–åŠ±åéª‘ï¼šç¢å¤©å…½ 
+			cout<<"ä½ å¾—åˆ°äº†åéª‘ï¼šé’¢é“ç¢å¤©å…½ã€‚"<<endl;
+			cout<<"ä½ çš„å·¦è¡Œé€Ÿåº¦åŠ å¿«äº†"<<endl;
 			speed=2; 
 			wanter=1;
 		}
@@ -358,9 +358,9 @@ int main(){
 		
 		
 		
-		if(place==7 and tower1==0){//´«ËÍËşÒ»ĞŞ¸´ 
-			cout<<"ÊÇ·ñ»¨5Ê¯Í·Óë12ÔªĞŞ¸´´Ë´¦µÄ´«ËÍËş?"<<endl;
-			cout<<"ÊäÈë1ÒÔĞŞ¸´,0È¡Ïû"<<endl;
+		if(place==7 and tower1==0){//ä¼ é€å¡”ä¸€ä¿®å¤ 
+			cout<<"æ˜¯å¦èŠ±5çŸ³å¤´ä¸12å…ƒä¿®å¤æ­¤å¤„çš„ä¼ é€å¡”?"<<endl;
+			cout<<"è¾“å…¥1ä»¥ä¿®å¤,0å–æ¶ˆ"<<endl;
 			cin>>fix;
 			if(fix==1 and stone>=5){
 				if(money>=12){
@@ -369,11 +369,11 @@ int main(){
 					tower1=1;
 				}
 				else{
-					cout<<"ÄãÃ»ÓĞ×ã¹»µÄÇ®¡£"<<endl;
+					cout<<"ä½ æ²¡æœ‰è¶³å¤Ÿçš„é’±ã€‚"<<endl;
 				}
 			}
 			else if(fix==1 and stone<5){
-				cout<<"ÄãÃ»ÓĞ×ã¹»µÄÊ¯Í·¡£"<<endl;
+				cout<<"ä½ æ²¡æœ‰è¶³å¤Ÿçš„çŸ³å¤´ã€‚"<<endl;
 			}
 			else{
 				
@@ -385,26 +385,27 @@ int main(){
 		
 		
 		
-		if(place==5 and m1==1){//Ò»ºÅ¹ÖÎïÄ£¿é 
-			cout<<"ÄãÔâÓöÁËÆÆÍ­ÀÃÌú»úÆ÷ÈË£¬¹¥»÷Á¦Îª1£¡"<<endl;
-			cout<<"ÊäÈë1À´¹¥»÷£¬0À´ÌÓÀë£º"<<endl;
+		if(place==5 and m1==1){//ä¸€å·æ€ªç‰©æ¨¡å— 
+			cout<<"ä½ é­é‡äº†ç ´é“œçƒ‚é“æœºå™¨äººï¼Œæ”»å‡»åŠ›ä¸º1ï¼"<<endl;
+			cout<<"è¾“å…¥1æ¥æ”»å‡»ï¼Œ0æ¥é€ƒç¦»ï¼š"<<endl;
 			cin>>battle;
 			Sleep(1000);
 			if(battle==1){
 				if(attack>=am1){
-					cout<<"Äã»÷°ÜÁËÆÆÍ­ÀÃÌú»úÆ÷ÈË"<<endl;
+					cout<<"ä½ å‡»è´¥äº†ç ´é“œçƒ‚é“æœºå™¨äºº"<<endl;
 					money=money+5;
 					stone++;
+					m1--;
 					if(attack==am1){
 						life--;
-						cout<<"²»¹ıÄãÒ²ÊÜÁËÉË¡£"<<endl;
+						cout<<"ä¸è¿‡ä½ ä¹Ÿå—äº†ä¼¤ã€‚"<<endl;
 						
 						
 					}
 					 
 				}
 				else{
-					cout<<"Äã±»ÆÆÍ­ÀÃÌú»úÆ÷ÈË»÷°ÜÁË£¡£¡"<<endl;
+					cout<<"ä½ è¢«ç ´é“œçƒ‚é“æœºå™¨äººå‡»è´¥äº†ï¼ï¼"<<endl;
 					life--;
 					place--;					
 				}
@@ -421,26 +422,27 @@ int main(){
 		
 		
 		
-		if(place==9 and m2==1){//¶şºÅ¹ÖÎïÄ£¿é 
-			cout<<"ÄãÔâÓöÁË·øÉäÄ§Ïñ£¬¹¥»÷Á¦Îª5£¡"<<endl;
-			cout<<"ÊäÈë1À´¹¥»÷£¬0À´ÌÓÀë£º"<<endl;
+		if(place==9 and m2==1){//äºŒå·æ€ªç‰©æ¨¡å— 
+			cout<<"ä½ é­é‡äº†è¾å°„é­”åƒï¼Œæ”»å‡»åŠ›ä¸º5ï¼"<<endl;
+			cout<<"è¾“å…¥1æ¥æ”»å‡»ï¼Œ0æ¥é€ƒç¦»ï¼š"<<endl;
 			cin>>battle;
 			Sleep(1000);
 			if(battle==1){
 				if(attack>=am2){
-					cout<<"Äã»÷°ÜÁË·øÉäÄ§Ïñ"<<endl;
+					cout<<"ä½ å‡»è´¥äº†è¾å°„é­”åƒ"<<endl;
 					money=money+7;
 					stone=stone+3;
+					m2--;
 					if(attack==am2){
 						life--;
-						cout<<"²»¹ıÄãÒ²ÊÜÁËÉË¡£"<<endl;
+						cout<<"ä¸è¿‡ä½ ä¹Ÿå—äº†ä¼¤ã€‚"<<endl;
 						
 						
 					}
 					 
 				}
 				else{
-					cout<<"Äã±»·øÉäÄ§Ïñ»÷°ÜÁË£¡£¡"<<endl;
+					cout<<"ä½ è¢«è¾å°„é­”åƒå‡»è´¥äº†ï¼ï¼"<<endl;
 					life--;
 					place--;
 					
@@ -455,26 +457,26 @@ int main(){
 		}
 		
 		
-		if(m3==1){//ÈıºÅ¹ÖÎïÄ£¿é 
+		if(m3==1){//ä¸‰å·æ€ªç‰©æ¨¡å— 
 			if(place==14){
-				cout<<"Äã½øÈëÁË»ğ¼ıÀÇµÄÉä³Ì£¬Ğ¡ĞÄ£¡"<<endl;
+				cout<<"ä½ è¿›å…¥äº†ç«ç®­ç‹¼çš„å°„ç¨‹ï¼Œå°å¿ƒï¼"<<endl;
 				Sleep(700);
 				if(attack>=am3){
-					cout<<"ÄãÊÕµ½ÁËÉä»÷£¬µ«Ã»ÓĞÊÜÉË"<<endl;
+					cout<<"ä½ æ”¶åˆ°äº†å°„å‡»ï¼Œä½†æ²¡æœ‰å—ä¼¤"<<endl;
 					
 				}
 				else{
-					cout<<"»ğ¼ıÀÇ¿ªÊ¼Éä»÷ÁË£¡ÄãÊÜµ½Ò»µãÉËº¦£¡"<<endl;
+					cout<<"ç«ç®­ç‹¼å¼€å§‹å°„å‡»äº†ï¼ä½ å—åˆ°ä¸€ç‚¹ä¼¤å®³ï¼"<<endl;
 					life--;
 				}
 			}
 			else if(place==15){
-				cout<<"ÄãÔâÓöÁË»ğ¼ıÀÇ,¹¥»÷Á¦Îª8£¡ÊäÈë1¹¥»÷£¬0ÌÓÀë¡£"<<endl;
+				cout<<"ä½ é­é‡äº†ç«ç®­ç‹¼,æ”»å‡»åŠ›ä¸º8ï¼è¾“å…¥1æ”»å‡»ï¼Œ0é€ƒç¦»ã€‚"<<endl;
 				cin>>battle;
 				Sleep(1000);
 				if(battle==1){
 					if(attack>am3){
-						cout<<"Äã»÷°ÜÁË»ğ¼ıÀÇ£¡"<<endl;
+						cout<<"ä½ å‡»è´¥äº†ç«ç®­ç‹¼ï¼"<<endl;
 						energy--;
 						m3--;
 						money=money+4;
@@ -486,7 +488,7 @@ int main(){
 				
 					}
 					else if(attack==am3){
-						cout<<"»ğ¼ıÀÇÒÑ»÷°Ü£¬ÄãÒ²¸ºÉË¡£"<<endl;
+						cout<<"ç«ç®­ç‹¼å·²å‡»è´¥ï¼Œä½ ä¹Ÿè´Ÿä¼¤ã€‚"<<endl;
 						life--;
 						energy--;
 						m3--;
@@ -494,7 +496,7 @@ int main(){
 						
 					}
 					else{
-						cout<<"Äã±»»ğ¼ıÀÇ»÷°ÜÁË£¡"<<endl;
+						cout<<"ä½ è¢«ç«ç®­ç‹¼å‡»è´¥äº†ï¼"<<endl;
 						place=13;
 						energy--;
 						life--;
@@ -502,53 +504,54 @@ int main(){
 					}
 				}
 				else{
-					cout<<"ÒÑÌÓÀëÖÁ»ğ¼ıÀÇÉä³ÌÖ®Íâ¡£"<<endl;
+					cout<<"å·²é€ƒç¦»è‡³ç«ç®­ç‹¼å°„ç¨‹ä¹‹å¤–ã€‚"<<endl;
 					place=13;
 					energy--;
 					
-				}//ÊÇ·ñÕ½¶· 
+				}//æ˜¯å¦æˆ˜æ–— 
 				
-			}//Î»ÖÃÅĞ¶Ï 
-		} //»ğ¼ıÀÇ´æ»î 
+			}//ä½ç½®åˆ¤æ–­ 
+		} //ç«ç®­ç‹¼å­˜æ´» 
 		
 		
 		if(m4==1 and place==20){
-			cout<<"ÄãÔâÓöÁËËÄÍ·¾ŞÁú£¡"<<endl;
-			cout<<"ÊäÈë1ÒÔ½øÈëËÄÍ·¾ŞÁúµÄÓÎÏ·"<<endl;
+			cout<<"ä½ é­é‡äº†å››å¤´å·¨é¾™ï¼"<<endl;
+			cout<<"è¾“å…¥1ä»¥è¿›å…¥å››å¤´å·¨é¾™çš„æ¸¸æˆ"<<endl;
 			cin>>battle;
 			if(battle==1){
 				int gamenumber;
-				gamenumber=rand()%30;//È¡1~30Ëæ»úÊı£¡£¡£¡£¡£¡£¡£¡£¡£¡ 
+				gamenumber=rand()%30;//å–1~30éšæœºæ•°ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ 
 				int a=1,number;
 				system("cls");
-				cout<<"ËÄÍ·¾ŞÁúÏëÁËÒ»µ½ÈıÊ®Ò»¸öÊı×Ö£¬ÄãÓĞËÄ´Î»ú»áÈ¥²Â²âËü"<<endl;
+				cout<<"å››å¤´å·¨é¾™æƒ³äº†ä¸€åˆ°ä¸‰åä¸€ä¸ªæ•°å­—ï¼Œä½ æœ‰å››æ¬¡æœºä¼šå»çŒœæµ‹å®ƒ"<<endl;
 				system("pause");
-				while(a<=4 and a!=0){
-					cout<<"ÊäÈëÄãµÄÊı×Ö£º";
+				while(a<=5 and a!=0){
+					cout<<"è¾“å…¥ä½ çš„æ•°å­—ï¼š";
 					cin>>number;
 					if(number==gamenumber){
-						cout<<"³É¹¦Æ¥Åä¡£"<<endl;
-						cout<<"ËÄÍ·¾ŞÁúÏûÊ§ÁË"<<endl;
+						cout<<"æˆåŠŸåŒ¹é…ã€‚"<<endl;
+						cout<<"å››å¤´å·¨é¾™æ¶ˆå¤±äº†"<<endl;
 						m4--;
 						money+=3;
 						wanter=1;
 						stone++;
 						food=3;
-						a=0; 
+						a=0;
 					}
-					else if(a>4){
+					else if(a==5){
 						life--;
-						cout<<"ÌôÕ½Ê§°Ü£¡£¡"<<endl;
+						cout<<"æŒ‘æˆ˜å¤±è´¥ï¼ï¼"<<endl;
 						energy--;
 						place=19;
+						break;
 					} 
 					else{
-						cout<<"Æ¥ÅäÊ§°Ü£¬ÒÑ³¢ÊÔ"<<a<<"/4´Î"<<endl;
+						cout<<"åŒ¹é…å¤±è´¥ï¼Œå·²å°è¯•"<<a<<"/4æ¬¡"<<endl;
 						if(number<gamenumber){
-							cout<<"¹ıĞ¡"<<endl;
+							cout<<"è¿‡å°"<<endl;
 						}
 						else if(number>gamenumber){
-							cout<<"¹ı´ó"<<endl;
+							cout<<"è¿‡å¤§"<<endl;
 						}
 						a++; 
 					}
@@ -556,7 +559,7 @@ int main(){
 					 
 			}
 			else{
-				cout<<"ÒÑÌÓÀë"<<endl;
+				cout<<"å·²é€ƒç¦»"<<endl;
 				place=19;
 				energy--;
 			}
@@ -567,24 +570,24 @@ int main(){
 		
 		
 		if(place==1){
-			cout<<"(ÊäÈërÒÔÏòÓÒĞĞ×ß£¬lÏò×óĞĞ×ß)"<<endl; 
+			cout<<"(è¾“å…¥rä»¥å‘å³è¡Œèµ°ï¼Œlå‘å·¦è¡Œèµ°)"<<endl; 
 		}
 		
 		
 		
 		
-		//ÉÌµêÅĞ¶¨Ä£¿é 
+		//å•†åº—åˆ¤å®šæ¨¡å— 
 		if(place==3){
 			store=1;
-			cout<<"ÕâÀïÓĞÒ»¸öÉÌµê£¬ÊäÈëeÒÔ½øÈë."<<endl;
+			cout<<"è¿™é‡Œæœ‰ä¸€ä¸ªå•†åº—ï¼Œè¾“å…¥eä»¥è¿›å…¥."<<endl;
 		}
 		else if(place==8){
 			store=2;
-			cout<<"ÕâÀïÓĞÒ»¸öÉÌµê£¬ÊäÈëeÒÔ½øÈë."<<endl;
+			cout<<"è¿™é‡Œæœ‰ä¸€ä¸ªå•†åº—ï¼Œè¾“å…¥eä»¥è¿›å…¥."<<endl;
 		}
 		else if(place==22){
 			store=3;
-			cout<<"ÕâÀïÓĞÒ»¸öÉÌµê£¬ÊäÈëeÒÔ½øÈë."<<endl;
+			cout<<"è¿™é‡Œæœ‰ä¸€ä¸ªå•†åº—ï¼Œè¾“å…¥eä»¥è¿›å…¥."<<endl;
 		}
 		else{
 			store=0;
@@ -592,13 +595,13 @@ int main(){
 		
 		
 		
-		//µØÍ¼ÊÂ¼ş½áÊø¡ü 
+		//åœ°å›¾äº‹ä»¶ç»“æŸâ†‘ 
 		
 		
 		
-		//ĞĞ¶¯ÊäÈë 
+		//è¡ŒåŠ¨è¾“å…¥ 
 		char order='n'; 
-		cout<<"ÄãµÄĞĞ¶¯£º"<<endl;
+		cout<<"ä½ çš„è¡ŒåŠ¨ï¼š"<<endl;
 		cin>>order;
 		
 		
@@ -607,12 +610,12 @@ int main(){
 			if(food>=1){
 				food--;
 				energy=energy+4;
-				cout<<"Äã¸Ğµ½¾«Á¦³äÅæ£¡"<<endl;
+				cout<<"ä½ æ„Ÿåˆ°ç²¾åŠ›å……æ²›ï¼"<<endl;
 				
 				
 			}
 			if(food==0){
-				cout<<"ÄãÃ»ÓĞÊ³ÎïÁË£¡"<<endl;
+				cout<<"ä½ æ²¡æœ‰é£Ÿç‰©äº†ï¼"<<endl;
 			}
 		}
 		
@@ -625,17 +628,17 @@ int main(){
 		
 		
 		
-		//×óĞĞÄ£¿é 
+		//å·¦è¡Œæ¨¡å— 
 		else if(order=='l'){
 			if(place==1){
-				cout<<"ÕâÊÇµØÍ¼µÄ×î×ó²à£¬ÏòÓÒÉîÈë°É£¡"<<endl;
+				cout<<"è¿™æ˜¯åœ°å›¾çš„æœ€å·¦ä¾§ï¼Œå‘å³æ·±å…¥å§ï¼"<<endl;
 				
 				
 			}
 			else{
 				place-=speed;
 				energy--;
-				cout<<"ÕıÔÚ×óĞĞ..."<<endl;
+				cout<<"æ­£åœ¨å·¦è¡Œ..."<<endl;
 				
 				
 				
@@ -643,26 +646,26 @@ int main(){
 			}
 			
 		}
-		//ÓÒĞĞÄ£¿é 
+		//å³è¡Œæ¨¡å— 
 		else if(order=='r'){
 			place++;
 			energy--;
-			cout<<"ÕıÔÚÓÒĞĞ..."<<endl;
+			cout<<"æ­£åœ¨å³è¡Œ..."<<endl;
 			
 		}
 		
 		
-		//ÉÌµêÉÌÆ·Ä£¿é
+		//å•†åº—å•†å“æ¨¡å—
 		
 		
 				
-		else if(order=='e' and store==1){//ÉÌµêÒ»ºÅ£¬µÚÈı¸ñ 
-			cout<<"ÉÌÆ·£º"<<endl;
-			cout<<"1.Ê³Îïx3£º5Ôª"<<endl;
-			cout<<"2.Ä¾°ô£¨¼Ó¶ş¹¥»÷Á¦£©£º5Ôª"<<endl;
-			cout<<"3.Ê¯Í·x2£º3Ôª"<<endl;
+		else if(order=='e' and store==1){//å•†åº—ä¸€å·ï¼Œç¬¬ä¸‰æ ¼ 
+			cout<<"å•†å“ï¼š"<<endl;
+			cout<<"1.é£Ÿç‰©x3ï¼š5å…ƒ"<<endl;
+			cout<<"2.æœ¨æ£’ï¼ˆåŠ äºŒæ”»å‡»åŠ›ï¼‰ï¼š5å…ƒ"<<endl;
+			cout<<"3.çŸ³å¤´x2ï¼š3å…ƒ"<<endl;
 			cout<<line<<endl;
-			cout<<"ÊäÈë¹ºÂòĞòºÅ»òÊäÈë'0'ÒÔÍË³öÉÌµê£º"<<endl;
+			cout<<"è¾“å…¥è´­ä¹°åºå·æˆ–è¾“å…¥'0'ä»¥é€€å‡ºå•†åº—ï¼š"<<endl;
 			cin>>buy;
 			if(buy==1){
 				if(money>=5){
@@ -670,18 +673,18 @@ int main(){
 				money=money-5;
 				}
 				else{
-					cout<<"ÄãµÄÇ®²»¹»"<<endl; 
+					cout<<"ä½ çš„é’±ä¸å¤Ÿ"<<endl; 
 				}
 								
 			}
 			if(buy==2){
 				if(money>=5){
-					weapon="Ä¾°ô";
+					weapon="æœ¨æ£’";
 					attack=attack+2;
 					money=money-5;
 				}
 				else{
-					cout<<"ÄãµÄÇ®²»¹»"<<endl; 
+					cout<<"ä½ çš„é’±ä¸å¤Ÿ"<<endl; 
 				}
 			}
 			if(buy==3){
@@ -690,24 +693,24 @@ int main(){
 					money=money-3;
 				}
 				else{
-					cout<<"ÄãµÄÇ®²»¹»£¡"<<endl;
+					cout<<"ä½ çš„é’±ä¸å¤Ÿï¼"<<endl;
 					
 				}
 			}
 			if(buy==0){
-				cout<<"ÕıÔÚÀë¿ªÉÌµê..."<<endl;
+				cout<<"æ­£åœ¨ç¦»å¼€å•†åº—..."<<endl;
 			}
 		}
 		 
 		
 		
-		else if(order=='e' and store==2){//ÉÌµê¶şºÅ£¬µÚ¾Å¸ñ 
-			cout<<"ÉÌÆ·£º"<<endl;
-			cout<<"1.Ê³Îïx3£º5Ôª"<<endl;
-			cout<<"2.Ê¯½££¨¹²8¹¥»÷Á¦£©£º7Ôª"<<endl;
-			cout<<"3.Ê¯Í·x2£º3Ôª"<<endl;
+		else if(order=='e' and store==2){//å•†åº—äºŒå·ï¼Œç¬¬ä¹æ ¼ 
+			cout<<"å•†å“ï¼š"<<endl;
+			cout<<"1.é£Ÿç‰©x3ï¼š5å…ƒ"<<endl;
+			cout<<"2.çŸ³å‰‘ï¼ˆå…±8æ”»å‡»åŠ›ï¼‰ï¼š7å…ƒ"<<endl;
+			cout<<"3.çŸ³å¤´x2ï¼š3å…ƒ"<<endl;
 			cout<<line<<endl;
-			cout<<"ÊäÈë¹ºÂòĞòºÅ»òÊäÈë'0'ÒÔÍË³öÉÌµê£º"<<endl;
+			cout<<"è¾“å…¥è´­ä¹°åºå·æˆ–è¾“å…¥'0'ä»¥é€€å‡ºå•†åº—ï¼š"<<endl;
 			cin>>buy;
 			if(buy==1){
 				if(money>=5){
@@ -715,18 +718,18 @@ int main(){
 				money=money-5;
 				}
 				else{
-					cout<<"ÄãµÄÇ®²»¹»"<<endl; 
+					cout<<"ä½ çš„é’±ä¸å¤Ÿ"<<endl; 
 				}
 								
 			}
 			if(buy==2){
 				if(money>=5){
-					weapon="Ê¯½£";
+					weapon="çŸ³å‰‘";
 					attack=8;
 					money=money-7;
 				}
 				else{
-					cout<<"ÄãµÄÇ®²»¹»"<<endl; 
+					cout<<"ä½ çš„é’±ä¸å¤Ÿ"<<endl; 
 				}
 			}
 			
@@ -737,7 +740,7 @@ int main(){
 					money=money-3;
 				}
 				else{
-					cout<<"ÄãµÄÇ®²»¹»£¡"<<endl;
+					cout<<"ä½ çš„é’±ä¸å¤Ÿï¼"<<endl;
 					
 				}
 			}
@@ -745,18 +748,18 @@ int main(){
 			
 			
 			if(buy==0){
-				cout<<"ÒÑÀë¿ªÉÌµê"<<endl;
+				cout<<"å·²ç¦»å¼€å•†åº—"<<endl;
 			}			
 		}
 		
 		
-		else if(order=='e' and store==3){//ÉÌµêÈıºÅ£¬µÚ¶şÊ®¸ñ 
-			cout<<"ÉÌÆ·£º"<<endl;
-			cout<<"1.Ê³Îïx3£º5Ôª"<<endl;
-			cout<<"2.½ğ¸«£¨¹²14¹¥»÷Á¦£©£º32Ôª"<<endl;
-			cout<<"3.È¾ÑªµÄÑûÇëº¯£º21Ôª"<<endl;
+		else if(order=='e' and store==3){//å•†åº—ä¸‰å·ï¼Œç¬¬äºŒåæ ¼ 
+			cout<<"å•†å“ï¼š"<<endl;
+			cout<<"1.é£Ÿç‰©x3ï¼š5å…ƒ"<<endl;
+			cout<<"2.é‡‘æ–§ï¼ˆå…±14æ”»å‡»åŠ›ï¼‰ï¼š32å…ƒ"<<endl;
+			cout<<"3.æŸ“è¡€çš„é‚€è¯·å‡½ï¼š21å…ƒ"<<endl;
 			cout<<line<<endl;
-			cout<<"ÊäÈë¹ºÂòĞòºÅ»òÊäÈë'0'ÒÔÍË³öÉÌµê£º"<<endl;
+			cout<<"è¾“å…¥è´­ä¹°åºå·æˆ–è¾“å…¥'0'ä»¥é€€å‡ºå•†åº—ï¼š"<<endl;
 			cin>>buy;
 			if(buy==1){
 				if(money>=5){
@@ -764,18 +767,18 @@ int main(){
 				money=money-5;
 				}
 				else{
-					cout<<"ÄãµÄÇ®²»¹»"<<endl; 
+					cout<<"ä½ çš„é’±ä¸å¤Ÿ"<<endl; 
 				}
 								
 			}
 			if(buy==2){
 				if(money>=32){
-					weapon="½ğ¸«";
+					weapon="é‡‘æ–§";
 					attack=14;
 					money=money-32;
 				}
 				else{
-					cout<<"ÄãµÄÇ®²»¹»"<<endl; 
+					cout<<"ä½ çš„é’±ä¸å¤Ÿ"<<endl; 
 				}
 			}
 			
@@ -786,7 +789,7 @@ int main(){
 					money=money-21;
 				}
 				else{
-					cout<<"ÄãµÄÇ®²»¹»£¡"<<endl;
+					cout<<"ä½ çš„é’±ä¸å¤Ÿï¼"<<endl;
 					
 				}
 			}
@@ -794,66 +797,66 @@ int main(){
 			
 			
 			if(buy==0){
-				cout<<"ÒÑÀë¿ªÉÌµê"<<endl;
+				cout<<"å·²ç¦»å¼€å•†åº—"<<endl;
 			}			
 		}
 		
 		
-		else if(order=='e' and place==26){//µØÏÂ²«»÷¾ãÀÖ²¿ 
+		else if(order=='e' and place==26){//åœ°ä¸‹æå‡»ä¿±ä¹éƒ¨ 
 			if(invitation==0){
-				cout<<"Äã±»¾ÜÖ®ÃÅÍâ..."<<endl;
+				cout<<"ä½ è¢«æ‹’ä¹‹é—¨å¤–..."<<endl;
 			}
 			else if(invitation==1){
 				system("cls");
 				Sleep(500);
-				string c1[]={"¸Ö³İ","ËÀÉñ4000ĞÍ","Ã×Ã×¶ûÂ¡µÄ»ú¼×","ËºĞÄÀÇ½«¾ü"};
-				string c2[]={"³æºóÔú¼ÓÀ­","÷¼÷ÃÍõÀî°ÂÈğ¿Ë","ĞÖµÜ»á»á³¤·¶¿ËÀï·ò","Å®ÑıÖ®ÍõÏ£¶ûÍßÄÈË¹","´óÊØ»¤ÕßÂóµÏÎÄ"} ;
+				string c1[]={"é’¢é½¿","æ­»ç¥4000å‹","ç±³ç±³å°”éš†çš„æœºç”²","æ’•å¿ƒç‹¼å°†å†›"};
+				string c2[]={"è™«åæ‰åŠ æ‹‰","éª·é«…ç‹æå¥¥ç‘å…‹","å…„å¼Ÿä¼šä¼šé•¿èŒƒå…‹é‡Œå¤«","å¥³å¦–ä¹‹ç‹å¸Œå°”ç“¦å¨œæ–¯","å¤§å®ˆæŠ¤è€…éº¦è¿ªæ–‡"} ;
 				int len1 = sizeof(c1)/sizeof(c1[0]);
   				int len2 = sizeof(c2)/sizeof(c2[0]);
 				while(money>=0 and money<=100){
-					cout<<"ÄãµÄÇ®£º"<<money<<endl;
+					cout<<"ä½ çš„é’±ï¼š"<<money<<endl;
 					string s1 = c1[rand()%len1];
   					string s2 = c2[rand()%len2];
-  					cout<<s1+"¶ÔÕó"+s2<<endl;
+  					cout<<s1+"å¯¹é˜µ"+s2<<endl;
   					int smokeright=rand()%1;
-					cout<<"ÄãÒªÏÂ×¢¸øË­£¿"<<endl<<"ÊäÈë1»ò2À´ÏÂ×¢£¬ÊäÈë0ÍË³ö"<<endl;
+					cout<<"ä½ è¦ä¸‹æ³¨ç»™è°ï¼Ÿ"<<endl<<"è¾“å…¥1æˆ–2æ¥ä¸‹æ³¨ï¼Œè¾“å…¥0é€€å‡º"<<endl;
 					cin>>smokepeople;
 					if(smokepeople==1){
-						cout<<"ÄãÒªÔÚ"+s1+"ÉíÉÏÏÂ×¢¶àÉÙÇ®£º";
+						cout<<"ä½ è¦åœ¨"+s1+"èº«ä¸Šä¸‹æ³¨å¤šå°‘é’±ï¼š";
 						cin>>smokemoney;
-						if(smokemoney>=money){
-							if(smokeright+1==smokepeople){
-								cout<<s1+"Ê¤ÀûÁË£¡"<<endl;
+						if(smokemoney<=money){
+							if(smokeright==smokepeople){
+								cout<<s1+"èƒœåˆ©äº†ï¼"<<endl;
 								money+=smokemoney;
 								
 							}
 							else{
-								cout<<s1<<"Ê§°ÜÁË£¡"<<endl;
+								cout<<s1<<"å¤±è´¥äº†ï¼"<<endl;
 								money-=smokemoney;
 							}
 							
 						}
 						else{
-							cout<<"ÄãµÄÇ®²»¹»"<<endl;
+							cout<<"ä½ çš„é’±ä¸å¤Ÿ"<<endl;
 						}
 					}
 					else if(smokepeople==2){
-						cout<<"ÄãÒªÔÚ"+s2+"ÉíÉÏÏÂ×¢¶àÉÙÇ®£º";
+						cout<<"ä½ è¦åœ¨"+s2+"èº«ä¸Šä¸‹æ³¨å¤šå°‘é’±ï¼š";
 						cin>>smokemoney;
-						if(smokemoney>=money){
-							if(smokeright+1==smokepeople){
-								cout<<s2+"Ê¤ÀûÁË£¡"<<endl;
+						if(smokemoney<=money){
+							if(smokeright==smokepeople){
+								cout<<s2+"èƒœåˆ©äº†ï¼"<<endl;
 								money+=smokemoney;
 								
 							}
 							else{
-								cout<<s2<<"Ê§°ÜÁË£¡"<<endl;
+								cout<<s2<<"å¤±è´¥äº†ï¼"<<endl;
 								money-=smokemoney;
 							}
 							
 						}
 						else{
-							cout<<"ÄãµÄÇ®²»¹»"<<endl;
+							cout<<"ä½ çš„é’±ä¸å¤Ÿ"<<endl;
 						}
 					}
 					else if(smokepeople==0){
@@ -861,17 +864,17 @@ int main(){
 						
 					}
 					else{
-						cout<<"ÊäÈë´íÎó"<<endl;
+						cout<<"è¾“å…¥é”™è¯¯"<<endl;
 					}
 					Sleep(3000);
 					system("cls");
 					
 				}
 				if(money==0){
-					cout<<"ÄãÒÑ¾­Ã»ÓĞÇ®ÁË£¬±»¸ÏÁË³öÀ´¡£"<<endl;
+					cout<<"ä½ å·²ç»æ²¡æœ‰é’±äº†ï¼Œè¢«èµ¶äº†å‡ºæ¥ã€‚"<<endl;
 				}
 				if(money>100){
-					cout<<"ÀÏ°å¿´ÄãÇ®Ì«¶àÁË£¬½«Äã¸ÏÁË³öÀ´¡£"<<endl;
+					cout<<"è€æ¿çœ‹ä½ é’±å¤ªå¤šäº†ï¼Œå°†ä½ èµ¶äº†å‡ºæ¥ã€‚"<<endl;
 				}
 				
 				
@@ -883,7 +886,7 @@ int main(){
 		
 		else if(order=='t'){
 			if(tower1==1){
-				cout<<"ÊäÈë1ÒÔ´«ËÍÖÁÎ»ÖÃ7"<<endl;
+				cout<<"è¾“å…¥1ä»¥ä¼ é€è‡³ä½ç½®7"<<endl;
 				
 			}
 			
@@ -895,10 +898,10 @@ int main(){
 			system("cls");
 			if(tp==1 and tower1==1){
 				place==7;
-				cout<<"´«ËÍ³É¹¦!"<<endl;
+				cout<<"ä¼ é€æˆåŠŸ!"<<endl;
 			}
 			else if(tp==1 and tower1!=1){
-				cout<<"Î´½âËø´«ËÍËşÒ»"<<endl;
+				cout<<"æœªè§£é”ä¼ é€å¡”ä¸€"<<endl;
 			}
 		} 
 		
@@ -909,19 +912,19 @@ int main(){
 		
 		
 		
-		else if(order=='s'){//´æµµÄ£¿é 
+		else if(order=='s'){//å­˜æ¡£æ¨¡å— 
 			ofstream fout("data.txt");
 			fout<<life<<" "<<money<<" "<<food<<" "<<weapon<<" "<<attack<<" "<<place<<" "<<energy<<" "<<stone<<" "<<house<<" "<<pay<<" "<<wanter<<" "<<speed<<" "<<invitation<<" "<<m1<<" "<<m2<<" "<<m3<<" "<<m4;
 			fout.close();
-			cout<<"½ø¶ÈÒÑ±£´æ..."<<endl; 
+			cout<<"è¿›åº¦å·²ä¿å­˜..."<<endl; 
 		}
 		
 		
 		
 		
 		else{
-			cout<<"Ö¸Áî´íÎó£¬ÇëÖØĞÂÊäÈë¡£"<<endl;
-		} //ĞĞ¶¯´íÎóÎ² 
+			cout<<"æŒ‡ä»¤é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚"<<endl;
+		} //è¡ŒåŠ¨é”™è¯¯å°¾ 
 		
 		
 		
@@ -934,12 +937,12 @@ int main(){
 		
 		Sleep(2000);
 		
-		system("cls");//ÇåÆÁ 
+		system("cls");//æ¸…å± 
 		
 		round=round+1;
 		
-	}//»ØºÏÑ­»·Î² 
+	}//å›åˆå¾ªç¯å°¾ 
 			
 	return 0;	
 	
-}//Ö÷º¯ÊıÎ² 
+}//ä¸»å‡½æ•°å°¾ 
